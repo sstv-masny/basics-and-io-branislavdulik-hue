@@ -61,6 +61,12 @@ void task02_sum_two_integers() {
     // Input: a b (integers)
     // Output: a+b=<sum>\n
     long long a, b;
+
+    cout<<"zadaj cisla 'a', 'b' "<<'\n';
+
+    cin>> a >> b;
+
+    cout<<"a+b="<<(a+b)<<'\n';
     // TODO: read a and b
     // TODO: print "a+b=" << (a+b) << '\n'
 }
@@ -69,7 +75,14 @@ void task03_average_of_three() {
     // Average of three numbers
     // Input: three doubles
     // Output: average with 2 decimals (fixed)
-    double a, b, c;
+    double a, b, c, pc,sum;
+    cout<<"zadaj cisla 'a', 'b','c' "<<'\n';
+
+    cin>> a >> b >>c;
+
+    cout<<"sum=a+b+c"<<sum=(a+b+c)<<'\n';
+    cout<<"pc=(a+b+c)/3"<<=pc=(a+b+c)<<'\n';
+
     // TODO: read
     // TODO: compute avg and print with fixed << setprecision(2)
 }
@@ -245,28 +258,28 @@ void task20_bmi_metric() {
 
 // --- Dispatcher ---
 int main(int argc, char** argv) {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+   // ios::sync_with_stdio(false);
+   // cin.tie(nullptr);
 
-    if (argc < 2) {
+   // if (argc < 2) {
         // No chatter; minimal guidance to keep judge-friendly behavior.
         // Print list to stderr to avoid polluting expected stdout for tasks.
-        cerr << "Usage: " << argv[0] << " <task-number 1-20> | --list\n";
-        return 1;
-    }
-    string arg = argv[1];
-    if (arg == "--list") {
-        list_specs();
-        return 0;
-    }
+   //     cerr << "Usage: " << argv[0] << " <task-number 1-20> | --list\n";
+  //      return 1;
+  //  }
+  //  string arg = argv[1];
+  //  if (arg == "--list") {
+  //      list_specs();
+    //    return 0;
+    //}
     // Parse integer task id
-    char* endptr = nullptr;
-    long id = strtol(arg.c_str(), &endptr, 10);
-    if (*endptr != '\0' || id < 1 || id > 20) {
-        cerr << "Invalid task id. Use 1..20 or --list.\n";
-        return 2;
-    }
-
+    //char* endptr = nullptr;
+    //long id = strtol(arg.c_str(), &endptr, 10);
+    //if (*endptr != '\0' || id < 1 || id > 20) {
+      //  cerr << "Invalid task id. Use 1..20 or --list.\n";
+        //return 2;
+    //}
+long  id=3;
     switch (id) {
         case 1:  task01_echo(); break;
         case 2:  task02_sum_two_integers(); break;
